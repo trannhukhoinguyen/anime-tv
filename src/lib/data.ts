@@ -1,4 +1,8 @@
 import { colors } from "./colors";
+import PNTT_part_I from "./pntt_part_I.ts";
+import PNTT_part_II from "./pntt_part_II.ts";
+import PNTT_part_III from "./pntt_part_III.ts";
+import PNTT from "./pntt_full.ts";
 
 export interface Playlist {
   id: string;
@@ -11,12 +15,12 @@ export interface Playlist {
 export const playlists: Playlist[] = [
   {
     id: "1",
-    title: "Electronic Party",
+    title: "Phàm Nhân Tu Tiên",
     color: colors.teal,
-    cover: "/images/pham_nhan_tu_tien.jpg",
+    cover: "/images/pham_nhan_tu_tien_duyen_khoi.jpg",
     artists: ["Vong Ngữ"],
   },
-  {
+ /* {
     id: "2",
     title: "Trance",
     color: colors.green,
@@ -50,7 +54,7 @@ export const playlists: Playlist[] = [
     color: colors.gray,
     cover: "/images/pham_nhan_tu_tien.jpg",
     artists: ["Vong Ngữ"],
-  },
+  },*/
 ];
 
 export const morePlaylists = [
@@ -73,116 +77,26 @@ export const allPlaylists = [
   ...sidebarPlaylists,
 ];
 
-interface Song {
-  id: string;
+interface Episode {
+  id: number;
   title: string;
-  image: string;
-  artists: string[];
-  channel: string;
-  duration: string;
+  image?: `/images/pham_nhan_tu_tien_avatar.jpg`,
+  author?: "Vong Ngữ";
+  channel?: "https://yanhh3d.vip/pham-nhan-tu-tien";
+  duration?: "20:00";
+  path: string;
   link: string;
-  videoId: string;
+  other_link?: string;
+  videoId?: string;
+  other_videoId?: string;
+  color?: (typeof colors)[keyof typeof colors];
 }
-const songScale = "w_40,h_40,c_scale";
-export const songs: Song[] = [
-  {
-    id: "1",
-    title: "The Nights",
-    image: `/images/pham_nhan_tu_tien.jpg`,
-    artists: ["Avicii"],
-    channel: "The Days / Nights",
-    duration: "2:56",
-    link: "/",
-    videoId: "1",
-  },
-  {
-    id: "2",
-    title: "Saint-Tropez",
-    image: `/images/pham_nhan_tu_tien.jpg`,
-    artists: ["Post Malone"],
-    channel: "Hollywood's Bleeding",
-    duration: "2:23",
-    link: "/",
-    videoId: "1",
-  },
-  {
-    id: "3",
-    title: "SICKO MODE",
-    image: `/images/pham_nhan_tu_tien.jpg`,
-    artists: ["Travis Scott", "Drake"],
-    channel: "ASTROWORLD",
-    duration: "5:13",
-    link: "/",
-    videoId: "1",
-  },
-  {
-    id: "4",
-    title: "Blinding Lights",
-    image: `/images/pham_nhan_tu_tien.jpg`,
-    artists: ["The Weeknd"],
-    channel: "After Hours",
-    duration: "3:22",
-    link: "/",
-    videoId: "1",
-  },
-  {
-    id: "5",
-    title: "Shape of You",
-    image: `/images/pham_nhan_tu_tien.jpg`,
-    artists: ["Ed Sheeran"],
-    channel: "÷ (Divide)",
-    duration: "3:53",
-    link: "/",
-    videoId: "1",
-  },
-  {
-    id: "6",
-    title: "Uptown Funk",
-    image: `/images/pham_nhan_tu_tien.jpg`,
-    artists: ["Mark Ronson", "Bruno Mars"],
-    channel: "Uptown Special",
-    duration: "4:30",
-    link: "/",
-    videoId: "1",
-  },
-  {
-    id: "7",
-    title: "Bad Guy",
-    image: `/images/pham_nhan_tu_tien.jpg`,
-    artists: ["Billie Eilish"],
-    channel: "When We All Fall Asleep, Where Do We Go?",
-    duration: "3:14",
-    link: "/",
-    videoId: "1",
-  },
-  {
-    id: "8",
-    title: "Yesterday",
-    image: `/images/pham_nhan_tu_tien.jpg`,
-    artists: ["The Beatles"],
-    channel: "Today & Tomorrow",
-    duration: "4:38",
-    link: "/",
-    videoId: "1",
-  },
-  {
-    id: "9",
-    title: "Havana",
-    image: `/images/pham_nhan_tu_tien.jpg`,
-    artists: ["Camila Cabello", "Young Thug"],
-    channel: "Camila",
-    duration: "3:37",
-    link: "/",
-    videoId: "1",
-  },
-  {
-    id: "10",
-    title: "Radioactive",
-    image: `/images/pham_nhan_tu_tien.jpg`,
-    artists: ["Imagine Dragons"],
-    channel: "Night Visions",
-    duration: "3:07",
-    link: "/",
-    videoId: "1",
-  },
+// const songScale = "w_40,h_40,c_scale";
+export const Episodes: Episode[] = [
+/*  ...PNTT_part_I,
+  ...PNTT_part_II,
+  ...PNTT_part_III,*/
+
+    // FULL
+    ...PNTT
 ];

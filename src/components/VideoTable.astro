@@ -1,10 +1,8 @@
 ---
 import { Icon } from "astro-icon";
-import { songs } from "../lib/data";
+import { Episodes } from "../lib/data";
 import PureInlineArtists from "./PureInlineArtists.astro";
 import InlineArtists from "./InlineArtists.astro";
-import VideoIframe from "../../src/components/Video.astro";
-import YouTubeIframe from "../../src/components/YouTube.astro";
 ---
 
 <table class="table-auto text-left min-w-full divide-y-2 divide-gray-500/30">
@@ -20,43 +18,52 @@ import YouTubeIframe from "../../src/components/YouTube.astro";
   </thead>
   <tbody>
   {
-    songs.map((song, index) => (
+    Episodes.map((episode, index) => (
         <tr class="group hover:bg-gray-500/20">
           <td class="whitespace-nowrap px-4 py-2">{index + 1}</td>
           <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
             <div class="h-10 w-10">
-              <!--              <img
-                              src={song.image}
-                              alt={song.title}
-                              class="rounded object-cover h-full w-full shadow-[5px_0_30px_0px_rgba(0,0,0,0.3)]"
-                            />-->
-              <YouTubeIframe
-                  title={song.title}
-                  videoId={song.videoId}
+              <img
+                src={episode.image}
+                alt={episode.title}
+                class="rounded object-cover h-full w-full shadow-[5px_0_30px_0px_rgba(0,0,0,0.3)]"
               />
             </div>
             <div class="leading-none">
               <a
-                  href="#"
+                  href={`/${episode.id}`}
                   class="text-gray-300 group-hover:text-white hover:underline text-sm"
               >
-                {song.title}
+                🎥 {episode.title}
               </a>
               <div class="text-sm text-gray-300 group-hover:text-white">
-                <InlineArtists artists={song.artists} />
+                <InlineArtists author={episode.author} />
               </div>
             </div>
           </td>
           <td class="whitespace-nowrap px-4 py-2">
             <a
-                href="#"
+                href={episode.link}
                 class="text-gray-300 group-hover:text-white hover:underline text-sm"
+                target="_blank"
             >
-              {song.link}
+              🎦 {episode.link}
             </a>
+            <br />
+            {
+              episode.other_link
+                ?  <a
+                      href={episode.other_link}
+                      class="text-gray-300 group-hover:text-white hover:underline text-sm"
+                      target="_blank"
+                  >
+                    🎦 {episode.other_link}
+                  </a>
+                : ''
+            }
           </td>
           <td class="whitespace-nowrap px-4 py-2 text-right">
-            {song.duration}
+            {episode.duration}
           </td>
         </tr>
     ))

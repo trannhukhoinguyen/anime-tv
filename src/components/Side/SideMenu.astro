@@ -2,6 +2,7 @@
 import SideMenuItem from "./SideMenuItem.astro";
 import { sidebarPlaylists } from "../../lib/data";
 import SideItemCard from "./SideItemCard.astro";
+import SideItemCardExpandable from "./SideItemCard.svelte"; // dùng bản svelte
 ---
 
 <div class="flex flex-col flex-1 gap-2">
@@ -19,7 +20,7 @@ import SideItemCard from "./SideItemCard.astro";
       </SideMenuItem>
     </ul>
     <ul class="pl-2">
-      {sidebarPlaylists.map((playlist) => <SideItemCard {playlist} />)}
+      {sidebarPlaylists.map((playlist) => <li><SideItemCardExpandable playlist={playlist} /></li>)}
     </ul>
   </div>
 </div>

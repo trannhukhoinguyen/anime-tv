@@ -1,12 +1,26 @@
 import { colors } from "./colors";
 import PNTT from "./pntt_full.ts";
 
+interface Episode {
+  id: number;
+  title: string;
+  image?: `/images/pham_nhan_tu_tien_avatar.jpg`,
+  author?: "Vong Ngữ";
+  channel?: "https://yanhh3d.vip/pham-nhan-tu-tien";
+  duration?: "20:00";
+  path: string;
+  link: string;
+  other_link?: string;
+  videoId?: string;
+  color?: (typeof colors)[keyof typeof colors];
+}
 export interface Playlist {
   id: string;
   title: string;
   color: (typeof colors)[keyof typeof colors];
   cover: string;
   artists: string[];
+  episodes?: Episode[];
 }
 
 export const playlists: Playlist[] = [
@@ -74,25 +88,6 @@ export const allPlaylists = [
   ...sidebarPlaylists,
 ];
 
-interface Episode {
-  id: number;
-  title: string;
-  image?: `/images/pham_nhan_tu_tien_avatar.jpg`,
-  author?: "Vong Ngữ";
-  channel?: "https://yanhh3d.vip/pham-nhan-tu-tien";
-  duration?: "20:00";
-  path: string;
-  link: string;
-  other_link?: string;
-  videoId?: string;
-  color?: (typeof colors)[keyof typeof colors];
-}
-// const songScale = "w_40,h_40,c_scale";
-export const Episodes: Episode[] = [
-/*  ...PNTT_part_I,
-  ...PNTT_part_II,
-  ...PNTT_part_III,*/
 
-    // FULL
-    ...PNTT
-];
+// const songScale = "w_40,h_40,c_scale";
+export const Episodes: Episode[] = PNTT;

@@ -36,10 +36,10 @@ PNTT.shift();
 PNTT.map(ep => {
   switch(ep.id) {
     case 1:
-      ep.videoId = '';
+      ep.videoId = 'https://short-cdn.ink/1c9620d1-df19-4684-ab37-886b18bdb34d';
       break;
     case 2:
-      ep.videoId = '';
+      ep.videoId = 'https://short-cdn.ink/c220bfab-4895-4cda-a3de-cca0c2115412';
       break;
     case 3:
       ep.videoId = '';

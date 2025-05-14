@@ -1,4 +1,6 @@
 <script context="module" lang="ts">
+  import {colors} from "../../lib/colors";
+
   export interface Episode {
     id: string;
     title: string;
@@ -7,10 +9,10 @@
   export interface Playlist {
     id: string;
     title: string;
-    artists: string[];
-    cover: string;
-    color: { dark: string };
-    episodes: Episode[];
+    color?: (typeof colors)[keyof typeof colors];
+    cover?: string;
+    author?: string;
+    episodes?: Episode[];
   }
 
   export let playlist: Playlist;
@@ -22,7 +24,7 @@
   <button
           class="playlist-item flex group relative p-2 overflow-hidden items-center gap-5 rounded-md shadow-lg hover:shadow-xl outline-none hover:bg-zinc-500/10 focus:bg-zinc-500/50 w-full text-left"
           on:click={() => (expanded = !expanded)}
-          data-color={playlist.color.dark}
+          data-color={playlist?.color?.dark}
   >
     <div class="h-12 w-12 flex-none">
       <img
@@ -36,7 +38,7 @@
         {playlist.title}
       </div>
       <div class="text-gray-400 text-sm truncate flex-1">
-        {playlist.artists.join(", ")}
+        {playlist.author}
       </div>
     </div>
   </button>

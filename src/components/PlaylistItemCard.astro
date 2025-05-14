@@ -26,7 +26,7 @@ const { playlist } = Astro.props;
   <div class="font-bold block" transition:name=`playlist ${playlist.id} title`>
     <p>{playlist.title}</p>
     <p class="text-gray-400 font-normal text-xs relative">
-      <PureInlineArtists artists={playlist.artists} />
+      <PureInlineArtists author={playlist.author} />
     </p>
   </div>
   <div

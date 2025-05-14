@@ -1,16 +1,9 @@
 ---
 interface Props {
-  artists: string[];
+    author: string;
 }
 
-const { artists } = Astro.props;
+const { author } = Astro.props;
 ---
 
-{
-  artists.map((artist, index) => (
-    <>
-      {artist}
-      {index === artists.length - 1 ? " " : ", "}
-    </>
-  ))
-}
+{author}

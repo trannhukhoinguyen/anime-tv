@@ -38,7 +38,7 @@ const { playlist } = Astro.props;
         {playlist.title}
       </div>
       <div class="text-gray-400 text-xs">
-        <PureInlineArtists artists={playlist.artists} />
+        <PureInlineArtists author=playlist.author />
       </div>
     </div>
   </div>

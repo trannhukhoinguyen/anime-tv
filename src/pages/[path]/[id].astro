@@ -3,10 +3,10 @@ import VideoIframe from "../../components/Video.astro";
 const { id, path } = Astro.params;
 import PageHeader from "../../components/PageHeader.astro";
 import Layout from "../../layouts/Layout.astro";
-import { Episodes } from "../../lib/data";
+import { PNTTEpisodes } from "../../lib/data";
 
 export function getStaticPaths() {
-  return Episodes.map((ep) => ({
+  return PNTTEpisodes.map((ep) => ({
     params: {
       path: ep.path,
       id: ep.id,
@@ -14,7 +14,7 @@ export function getStaticPaths() {
   }));
 }
 
-const episode = Episodes.find((ep) => ep.id === +id);
+const episode = PNTTEpisodes.find((ep) => ep.id === +id);
 ---
 
 <Layout image={episode?.image} title={episode?.title || "404"}>

@@ -1,0 +1,23 @@
+---
+import PageHeader from "../components/PageHeader.astro";
+import Layout from "../layouts/Layout.astro";
+import YouTubePlaylist from "../components/YouTubePlaylist.astro";
+---
+
+<Layout title="About">
+  <div
+    id="playlist-container"
+    class="relative transition-all duration-1000 bg-context"
+    style="min-height:300px;--context-color:#134e4a;"
+  >
+    <PageHeader />
+    <div class="px-6 relative z-10 mt-4">
+      <h2 class="text-2xl font-bold">Youtube Playlist</h2>
+      <YouTubePlaylist
+          playlistId="PLvABDE5gBEnbQMGW2AhUrUMgN3cdgpRAh"
+          title="Phàm Nhân Tu Tiên (EN SUB)"
+          autoplay={false}
+      />
+    </div>
+  </div>
+</Layout>

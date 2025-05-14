@@ -28,7 +28,7 @@ const { playlist } = Astro.props;
       {playlist.title}
     </div>
     <div class="text-gray-400 text-sm truncate flex-1">
-      <PureInlineArtists artists={playlist.artists} />
+      {playlist.author}
     </div>
   </div>
 </a>

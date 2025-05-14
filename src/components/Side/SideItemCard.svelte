@@ -35,23 +35,23 @@
     </div>
     <div class="flex flex-auto flex-col truncate">
       <div class="font-semibold w-full flex-none truncate">
-        {playlist.title}
+        {playlist?.title}
       </div>
       <div class="text-gray-400 text-sm truncate flex-1">
-        {playlist.author}
+        {playlist?.author}
       </div>
     </div>
   </button>
 
   {#if expanded}
     <ul class="ml-16 mt-2 flex flex-col gap-1">
-      {#each playlist.episodes as ep}
+      {#each playlist?.episodes as ep}
         <li>
           <a
-                  href={`/playlist/${playlist.id}/episode/${ep.id}`}
+                  href={`/playlist/${playlist?.id}/episode/${ep?.id}`}
                   class="block text-sm text-zinc-300 hover:underline truncate"
           >
-            {ep.title}
+            {ep?.title}
           </a>
         </li>
       {/each}

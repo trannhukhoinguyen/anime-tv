@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon";
-import { Episodes } from "../lib/data";
+import { PNTTEpisodes } from "../lib/data";
 import PureInlineArtists from "./PureInlineArtists.astro";
 import InlineArtists from "./InlineArtists.astro";
 ---
@@ -18,7 +18,7 @@ import InlineArtists from "./InlineArtists.astro";
   </thead>
   <tbody>
   {
-    Episodes.map((episode, index) => (
+    PNTTEpisodes.map((episode, index) => (
         <tr class="group hover:bg-gray-500/20">
           <td class="whitespace-nowrap px-4 py-2">{index + 1}</td>
           <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">

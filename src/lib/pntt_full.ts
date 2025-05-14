@@ -11,7 +11,6 @@ interface Episode {
   link: string;
   other_link?: string;
   videoId?: string;
-  other_videoId?: string;
   color?: { accent: "#ffae00", dark: "#78350f" };
 }
 
@@ -22,7 +21,6 @@ let PNTT: Episode[] = [{
   link: "",
   other_link: "",
   videoId: "",
-  other_videoId: "",
 }];
 for (let i = 1; i <= 143; i++) {
   PNTT.push({
@@ -32,7 +30,6 @@ for (let i = 1; i <= 143; i++) {
     path: `pham-nhan-tu-tien`,
     link: `https://yanhh3d.vip/pham-nhan-tu-tien/tap-${i}`,
     videoId: "",
-    other_videoId: "",
   })
 }
 PNTT.shift();

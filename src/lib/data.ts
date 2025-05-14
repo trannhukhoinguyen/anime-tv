@@ -1,7 +1,4 @@
 import { colors } from "./colors";
-import PNTT_part_I from "./pntt_part_I.ts";
-import PNTT_part_II from "./pntt_part_II.ts";
-import PNTT_part_III from "./pntt_part_III.ts";
 import PNTT from "./pntt_full.ts";
 
 export interface Playlist {
@@ -88,7 +85,6 @@ interface Episode {
   link: string;
   other_link?: string;
   videoId?: string;
-  other_videoId?: string;
   color?: (typeof colors)[keyof typeof colors];
 }
 // const songScale = "w_40,h_40,c_scale";

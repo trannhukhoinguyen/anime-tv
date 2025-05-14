@@ -25,7 +25,7 @@ let PNTT: Episode[] = [{
 for (let i = 1; i <= 143; i++) {
   PNTT.push({
     id: i,
-    title: `Phàm Nhân Tu Tiên Tập ${i}`,
+    title: `PNTT ep. ${i}`,
     image: `/images/pham_nhan_tu_tien_avatar.jpg`,
     path: `pham-nhan-tu-tien`,
     link: `https://yanhh3d.vip/pham-nhan-tu-tien/tap-${i}`,
@@ -36,34 +36,34 @@ PNTT.shift();
 PNTT.map(ep => {
   switch(ep.id) {
     case 1:
-      ep.videoId = 'https://short-cdn.ink/1c9620d1-df19-4684-ab37-886b18bdb34d';
+      ep.videoId = 'x7vgpfu';
       break;
     case 2:
-      ep.videoId = 'https://short-cdn.ink/c220bfab-4895-4cda-a3de-cca0c2115412';
+      ep.videoId = 'x7vgptq';
       break;
     case 3:
-      ep.videoId = '';
+      ep.videoId = 'x7vgq8j';
       break;
     case 4:
-      ep.videoId = '';
+      ep.videoId = 'x7vgqa7';
       break;
     case 5:
-      ep.videoId = '';
+      ep.videoId = 'x7vc7s5';
       break;
     case 6:
-      ep.videoId = '';
+      ep.videoId = 'x7vgrjq';
       break;
     case 7:
-      ep.videoId = '';
+      ep.videoId = 'x7vllb0';
       break;
     case 8:
-      ep.videoId = '';
+      ep.videoId = 'x7vrtmy';
       break;
     case 9:
-      ep.videoId = '';
+      ep.videoId = 'x7wu7b4';
       break;
     case 10:
-      ep.videoId = '';
+      ep.videoId = 'x7wu7b5';
       break;
     case 11:
       ep.videoId = '';

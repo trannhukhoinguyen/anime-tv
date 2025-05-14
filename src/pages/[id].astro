@@ -27,15 +27,6 @@ const episode = Episodes.find((ep) => ep.id === +id);
         title={episode?.title}
         src={episode?.videoId}
     />
-    <hr />
-    {
-      episode.other_videoId
-        ? <VideoIframe
-            title={episode?.title}
-            src={episode?.other_videoId}
-          />
-        : ''
-    }
   </div>
 </Layout>
 

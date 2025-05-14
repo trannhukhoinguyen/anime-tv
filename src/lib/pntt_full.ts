@@ -25,7 +25,7 @@ let PNTT: Episode[] = [{
 for (let i = 1; i <= 143; i++) {
   PNTT.push({
     id: i,
-    title: `Phàm Nhân Tu Tiên Tập ${i} - VietSub`,
+    title: `Phàm Nhân Tu Tiên Tập ${i}`,
     image: `/images/pham_nhan_tu_tien_avatar.jpg`,
     path: `pham-nhan-tu-tien`,
     link: `https://yanhh3d.vip/pham-nhan-tu-tien/tap-${i}`,

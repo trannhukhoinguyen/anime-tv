@@ -1,7 +1,7 @@
 ---
 import SideMenuItem from "./SideMenuItem.astro";
 import { sidebarPlaylists } from "../../lib/data";
-import SideItemCard from "./SideItemCard.astro";
+import SideItemCardEpisode from "./SideItemCardEpisode.astro";
 ---
 
 <div class="flex flex-col flex-1 gap-2">
@@ -19,7 +19,7 @@ import SideItemCard from "./SideItemCard.astro";
       </SideMenuItem>
     </ul>
     <ul class="pl-2">
-      {sidebarPlaylists.map((list) => <li><SideItemCard playlist={list} /></li>)}
+      {sidebarPlaylists.map((list) => <li><SideItemCardEpisode playlist={list} /></li>)}
     </ul>
   </div>
 </div>

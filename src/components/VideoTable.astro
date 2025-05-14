@@ -37,7 +37,9 @@ import InlineArtists from "./InlineArtists.astro";
                 🎥 {episode.title}
               </a>
               <div class="text-sm text-gray-300 group-hover:text-white">
-                <InlineArtists author={episode.author} />
+                <a href={"#"} class="hover:underline">
+                  {episode.author}
+                </a>
               </div>
             </div>
           </td>

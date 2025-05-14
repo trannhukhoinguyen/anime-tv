@@ -1,5 +1,10 @@
 import { colors } from "./colors";
-import PNTT from "./pntt_full.ts";
+import {
+    PNTT,
+    PNTTCombo3,
+    PNTTCombo5,
+    PNTTSII,
+} from "./pntt_full.ts";
 
 // const songScale = "w_40,h_40,c_scale";
 interface Episode {
@@ -16,7 +21,10 @@ interface Episode {
   color?: (typeof colors)[keyof typeof colors];
 }
 
-export const PNTTEpisodes: Episode[] = PNTT;
+export const PNTTEpisodesC1: Episode[] = PNTT;
+export const PNTTEpisodesC3: Episode[] = PNTTCombo3;
+export const PNTTEpisodesC5: Episode[] = PNTTCombo5;
+export const PNTTEpisodesSII: Episode[] = PNTTSII;
 
 export interface Playlist {
   id: string;
@@ -33,43 +41,43 @@ export const playlists: Playlist[] = [
     title: "Phàm Nhân Tu Tiên",
     color: colors.teal,
     cover: "/images/pham_nhan_tu_tien_duyen_khoi.jpg",
-    episodes: PNTTEpisodes,
+    episodes: PNTTEpisodesC1,
   },
- /* {
+ {
     id: "2",
-    title: "Trance",
+    title: "Phàm Nhân Tu Tiên (combo 3)",
     color: colors.green,
-    cover: "/images/pham_nhan_tu_tien_duyen_khoi.jpg",
-    episodes: PNTTEpisodes,
+    cover: "/images/pham_nhan_tu_tien_cover.jpg",
+    episodes: PNTTEpisodesC3,
   },
-  {
+{
     id: "3",
-    title: "Trap Vibes",
+    title: "Phàm Nhân Tu Tiên (combo 5)",
     color: colors.rose,
-    cover: "/images/pham_nhan_tu_tien_duyen_khoi.jpg",
-    episodes: PNTTEpisodes,
+    cover: "/images/mortals-journey-to-immortality-season-3.png",
+    episodes: PNTTEpisodesC5,
   },
   {
-    id: "4",
-    title: "Beatles Classics",
-    color: colors.red,
-    cover: "/images/pham_nhan_tu_tien_duyen_khoi.jpg",
-    episodes: PNTTEpisodes,
-  },
-  {
-    id: "5",
-    title: "Electronic Dance",
-    color: colors.pink,
-    cover: "/images/pham_nhan_tu_tien_duyen_khoi.jpg",
-    episodes: PNTTEpisodes,
-  },
-  {
-    id: "6",
-    title: "Cow songs",
-    color: colors.gray,
-    cover: "/images/pham_nhan_tu_tien_duyen_khoi.jpg",
-    episodes: PNTTEpisodes,
-  },*/
+   id: "4",
+   title: "Phàm Nhân Tu Tiên II",
+   color: colors.red,
+   cover: "/images/pham_nhan_tu_tien.jpg",
+   episodes: PNTTEpisodesSII,
+ },
+    /* {
+      id: "5",
+      title: "Electronic Dance",
+      color: colors.pink,
+      cover: "/images/pham_nhan_tu_tien_duyen_khoi.jpg",
+      episodes: PNTTEpisodes,
+    },
+    {
+      id: "6",
+      title: "Cow songs",
+      color: colors.gray,
+      cover: "/images/pham_nhan_tu_tien_duyen_khoi.jpg",
+      episodes: PNTTEpisodes,
+    },*/
 ];
 
 export const morePlaylists = [
